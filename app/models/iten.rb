@@ -1,0 +1,2 @@
+class Iten < ApplicationRecord
+end

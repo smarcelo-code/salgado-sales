@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Itens</h1>
+
+<div id="itens">
+  <% @itens.each do |iten| %>
+    <%= render iten %>
+    <p>
+      <%= link_to "Show this iten", iten %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New iten", new_iten_path %>

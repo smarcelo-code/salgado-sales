@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_18_184354) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_19_140416) do
   create_table "clients", force: :cascade do |t|
     t.string "name"
     t.string "email"
@@ -27,6 +27,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_18_184354) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "avalaible_quantity"
+    t.datetime "valite_time"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -36,6 +37,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_18_184354) do
     t.integer "client_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "payment_type"
     t.index ["client_id"], name: "index_orders_on_client_id"
     t.index ["item_id"], name: "index_orders_on_item_id"
   end
